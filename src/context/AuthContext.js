@@ -37,16 +37,8 @@ const AuthProvider = ({ children }) => {
       if (storedToken) {
         setLoading(true)
 
-        // await axios
-        //   .get(authConfig.meEndpoint, {
-        //     headers: {
-        //       Authorization: storedToken
-        //     }
-        //   })
-        //   .then(async response => {
-        //     setLoading(false)
         try {
-          const x = jwt.verify(storedToken,"skksksssksk")
+          const x = jwt.verify(storedToken,process.env.NEXT_PUBLIC_JWT_REFRESH_TOKEN_SECRET)
           const data = jwt.decode(storedToken)
           setUser(data)
           setLoading(false)
