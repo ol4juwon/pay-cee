@@ -10,7 +10,7 @@ import { initiatePayout, verifyTranx } from 'src/store/apps/transactions'
 const VerifyTransactions = () => {
   const router = useRouter()
   const dispatch = useDispatch();
-  const { trx_ref, reference } = router.query
+  const { trxref, reference } = router.query
 
     const verfiyTrandx = data => {
 
@@ -20,10 +20,10 @@ const VerifyTransactions = () => {
     
     useEffect(() => {
       if(reference){
-        verfiyTrandx({ trx_ref, reference })
+        verfiyTrandx({ trx_ref:trxref, reference })
 
       }
-    }, [reference, trx_ref])
+    }, [reference, trxref])
     
 
 return <Box></Box>
