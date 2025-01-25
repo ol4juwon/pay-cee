@@ -92,10 +92,10 @@ export const chargeCard = createAsyncThunk(
 
 export const verifyTranx = createAsyncThunk(
   'Transactions/verifyTransaction',
-  async ({ trx_ref, reference }, { getState, dispatch }) => {
+  async ({ trxref, reference }, { getState, dispatch }) => {
     try {
       const payload = {
-        trx_ref, reference
+        trxref, reference
       }
       const response = await TransactionService.verifyTransaction(payload)
       if (response.data) {
