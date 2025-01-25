@@ -120,7 +120,6 @@ const UserList = ({ apiData }) => {
     dispatch(fetchBankcodes())
   }, [dispatch])
 
-  console.log({ bankcodes: store?.banks })
 
   const handleFilter = useCallback(val => {
     setValue(val)

@@ -77,7 +77,6 @@ const AuthProvider = ({ children }) => {
       .then(async response => {
         window.localStorage.setItem(authConfig.storageTokenKeyName, response.data.token)
         const data = jwt.decode(response.data.token)
-        console.log({data})
         const returnUrl = router.query.returnUrl
         setUser({ ...data })
 

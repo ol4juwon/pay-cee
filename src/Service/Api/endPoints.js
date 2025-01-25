@@ -71,7 +71,7 @@ export const getValidateAccountUrl = () => {
 }
 
 export const getVerifyTransactionUrl = (query) => {
-  return `/payments/verify?trxref=${query.trxref}&reference=${query.reference}`
+  return `/payments/verify?trxref=${query.reference}&reference=${query.reference}`
 
 }
 

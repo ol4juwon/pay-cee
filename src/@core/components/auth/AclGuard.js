@@ -31,7 +31,6 @@ const AclGuard = props => {
     return <>{children}</>
   }
 
-  console.log({auth})
 
   // User is logged in, build ability for the user based on his role
   if (auth.user && auth.user.role && !ability) {

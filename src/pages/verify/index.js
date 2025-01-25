@@ -14,13 +14,13 @@ const VerifyTransactions = () => {
 
     const verfiyTrandx = data => {
 
-          dispatch(verifyTranx({ ...data }))
+          dispatch(verifyTranx({ trxref, reference}))
   
       }
     
     useEffect(() => {
       if(reference){
-        verfiyTrandx({ trx_ref:trxref, reference })
+        verfiyTrandx({ trxref, reference })
 
       }
     }, [reference, trxref])

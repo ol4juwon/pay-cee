@@ -53,7 +53,6 @@ export const initiatePayout = createAsyncThunk(
           reason: narration
         }
       }
-      console.log({ payload })
       const response = await TransactionService.initiatePayouts(payload)
       if (response.data) {
         toast.success('Transaction initiated, redirecting to paystack now!')
@@ -61,7 +60,6 @@ export const initiatePayout = createAsyncThunk(
       }
       if (response.error) toast.error('Payout failed')
     } catch (error) {
-      console.log({ error })
       toast.error(error.message)
 
       return error

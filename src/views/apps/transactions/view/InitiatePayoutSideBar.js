@@ -75,7 +75,6 @@ const InitiatePayoutSideBar = props => {
   })
 
   const onSubmit = data => {
-    console.log({data})
     if (data.cardId) {
 
 
@@ -109,9 +108,6 @@ const InitiatePayoutSideBar = props => {
  
     if (done == false) {
       dispatch(fetchCards({}))
-      setTimeout(() => {
-        console.log("ue cards",{cards})
-      }, 100);
     }
 
     return () => {
