@@ -154,16 +154,15 @@ return (
                     value={value}
                     required
                     id='select-merchant'
-                    label='Select Merchant'
+                    label='Select Card'
                     labelId='select-merchant'
                     onChange={onChange}
-                    inputProps={{ placeholder: 'Select Merchant' }}
+                    inputProps={{ placeholder: 'Select Card' }}
                   >
-                    <MenuItem value=''>Select Merchant for payout</MenuItem>
-                    <MenuItem value={"new_card"}>
-                      New Card
+                    <MenuItem key="new_card" value={"new_card"}>
+                     + Add Card
                     </MenuItem>
-                    {cards?.cards?.map((item, index) => (
+                    {cards?.cards && cards?.cards?.map((item, index) => (
                       <MenuItem key={index} value={`${item.cardID}`}>
                         **********{item.last4} -{item.bank}
                       </MenuItem>
