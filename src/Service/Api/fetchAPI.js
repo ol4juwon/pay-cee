@@ -6,7 +6,7 @@ export default (url, method, data) => {
   // let token = ''
   const token = localStorage.getItem('accessToken')
   let options
-console.log("request Date",{data})
+
 
   const args = {
     method: method || 'POST',
@@ -15,7 +15,6 @@ console.log("request Date",{data})
   if (method) {
     options = { ...args }
   }
-  console.log({args})
 
   return fetch(Config.REST_ENDPOINT + url, {
     signal: aboutcontroller.signal,
